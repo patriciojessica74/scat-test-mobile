@@ -1,0 +1,238 @@
+* {
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: url("../Img/background.png") center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(8px);
+    padding: 20px;
+}
+
+/* CONTAINER */
+.container {
+    width: 900px;
+    max-width: 100%;
+    min-height: 500px;
+    display: flex;
+    background: #e5e5e5;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+/* LEFT PANEL */
+.left-panel {
+    width: 45%;
+    background: url("../Img/background.png") center/cover no-repeat;
+}
+
+.overlay {
+    background: rgba(120, 0, 0, 0.85);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    width: 200px;
+    max-width: 80%;
+}
+
+/* RIGHT PANEL */
+.right-panel {
+    width: 55%;
+    padding: 60px;
+    background: #e6e6e6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.right-panel h1 {
+    font-size: 45px;
+    margin-bottom: 5px;
+    text-align: center;
+    color: #222;
+}
+
+.right-panel p {
+    margin: 5px;
+    margin-bottom: 25px;
+    color: #444;
+    text-align: center;
+    font-size: 14px;
+}
+
+.right-panel a {
+    color: #003cff;
+    text-decoration: none;
+}
+
+.right-panel a:hover {
+    text-decoration: underline;
+}
+
+/* FORM */
+form {
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+.input-group {
+    margin-top: 10px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px 45px 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    background: #7a0b0b;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    outline: none;
+}
+
+.input-group input::placeholder {
+    color: rgba(208, 205, 205, 0.85);
+}
+
+.input-group input:focus {
+    border-color: #7b1e1e;
+}
+
+/* TOGGLE PASSWORD */
+.toggle-password {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: rgba(208, 205, 205, 0.85);
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+}
+
+.toggle-password:focus-visible {
+    outline: 2px solid #ffffff;
+    outline-offset: 2px;
+    border-radius: 50%;
+}
+
+.forgot {
+    font-size: 13px;
+    display: block;
+    text-align: right;
+    margin-top: 8px;
+    margin-bottom: 5px;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+}
+
+.login-btn {
+    margin-top: 25px;
+    width: 200px;
+    padding: 10px;
+    background: #7a0b0b;
+    color: #fff;
+    border-radius: 30px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    display: block;
+    transition: 0.3s;
+}
+
+.login-btn:hover {
+    background: rgb(161, 32, 32);
+}
+
+/* TABLET */
+@media (max-width: 900px) {
+    .container {
+        width: 95%;
+        min-height: auto;
+    }
+
+    .right-panel {
+        padding: 40px 30px;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+        align-items: flex-start;
+    }
+
+    .container {
+        flex-direction: column;
+        width: 100%;
+        min-height: auto;
+    }
+
+    .left-panel,
+    .right-panel {
+        width: 100%;
+    }
+
+    .left-panel {
+        height: 200px;
+    }
+
+    .right-panel {
+        padding: 30px 20px;
+    }
+
+    form {
+        max-width: 350px;
+        width: 100%;
+    }
+
+    .login-btn {
+        width: 200px;
+    }
+}
+
+/* SMALL MOBILE */
+@media (max-width: 480px) {
+    .left-panel {
+        height: 150px;
+    }
+
+    .right-panel {
+        padding: 25px 15px;
+    }
+
+    .logo {
+        width: 140px;
+    }
+
+    .right-panel h1 {
+        font-size: 26px;
+    }
+}
