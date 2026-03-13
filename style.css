@@ -6,7 +6,7 @@
 body {
     margin: 0;
     min-height: 100vh;
-    background: url("../Img/background.png") center/cover no-repeat;
+    background: url("image/background.png") center/cover no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -29,7 +29,7 @@ body {
 /* LEFT PANEL */
 .left-panel {
     width: 45%;
-    background: url("../Img/background.png") center/cover no-repeat;
+    background: url("image/background.png") center/cover no-repeat;
 }
 
 .overlay {
